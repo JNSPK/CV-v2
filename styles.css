@@ -237,7 +237,7 @@ h3:hover {
   background-size: 100% 100%;
 }
 
-@media screen and (max-width: 1200px) and (min-width: 700px) {
+@media screen and (max-width: 1200px) and (min-width: 700px) and (orientation: portrait) {
   .aboutme {
     position: absolute;
     max-height: 100%;
