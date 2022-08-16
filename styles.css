@@ -45,6 +45,15 @@ body {
   width: 100%;
   height: 100%;
   right: -65%;
+  transition: 1s;
+}
+.aboutmeopen {
+  position: absolute;
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  transition: 1s;
 }
 
 .aboutmepage {
@@ -103,6 +112,15 @@ h1:hover {
   width: 100%;
   height: 100%;
   right: -75%;
+  transition: 1s;
+}
+.achievementsopen {
+  position: absolute;
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  transition: 1s;
 }
 
 .achievementspage {
@@ -160,8 +178,16 @@ h2:hover {
   width: 100%;
   height: 100%;
   right: -87%;
+  transition: 1s;
 }
-
+.contactopen {
+  position: absolute;
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  transition: 1s;
+}
 .contactpage {
   display: flex;
   position: absolute;
