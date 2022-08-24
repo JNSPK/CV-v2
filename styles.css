@@ -1,3 +1,5 @@
+/* GENERIC */
+
 body {
   font-family: "Arvo", serif;
   height: 100vh;
@@ -5,6 +7,9 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* GENERIC */
+
 .page {
   display: flex;
   flex-direction: row;
@@ -120,7 +125,7 @@ h1:hover {
   max-height: 100vh;
   width: 100%;
   height: 100%;
-  right: 0;
+  right: -10%;
   transition: 1s;
 }
 
@@ -137,7 +142,6 @@ h1:hover {
   max-height: 100%;
   height: 100vh;
   width: 100%;
-
   background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
   background-position: top;
   background-size: 100% 0;
@@ -186,7 +190,7 @@ h2:hover {
   max-height: 100vh;
   width: 100%;
   height: 100%;
-  right: 0;
+  right: -25%;
   transition: 1s;
 }
 .contactpage {
@@ -288,8 +292,8 @@ h3:hover {
     max-height: 100vh;
     width: 100%;
     height: 100%;
-    right: 0;
-    bottom: 0;
+    right: -10%;
+    bottom: 10%;
     transition: 1s;
   }
   .achievementspage {
@@ -326,8 +330,8 @@ h3:hover {
     max-height: 100vh;
     width: 100%;
     height: 100%;
-    right: 0;
-    bottom: 0;
+    right: -25%;
+    bottom: 25%;
     transition: 1s;
   }
   .contactpage {
@@ -402,8 +406,8 @@ h3:hover {
     max-height: 100vh;
     width: 100%;
     height: 100%;
-    right: 0;
-    bottom: 0;
+    right: -10%;
+    bottom: 10%;
     transition: 1s;
   }
   .achievementspage {
@@ -440,8 +444,8 @@ h3:hover {
     max-height: 100vh;
     width: 100%;
     height: 100%;
-    right: 0;
-    bottom: 0;
+    right: -25%;
+    bottom: 25%;
     transition: 1s;
   }
   .contactpage {
