@@ -225,7 +225,7 @@ h3:hover {
 
 /* MEDIA QUERIES*/
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) and (orientation: portrait) {
   .aboutme {
     flex-direction: column-reverse;
     right: -60%;
