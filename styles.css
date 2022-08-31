@@ -1,17 +1,18 @@
+/* GENERIC */
+
 body {
+  display: flex;
+  flex-direction: row;
+  position: relative;
   font-family: "Arvo", serif;
   height: 100vh;
   width: 100vw;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
-.page {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
+
+/* GENERIC */
 
 .backgroundimg {
   display: flex;
@@ -20,8 +21,6 @@ body {
   object-fit: cover;
   height: 100%;
   width: 100%;
-  min-width: 100%;
-  min-height: 100%;
   z-index: -1;
 }
 
@@ -34,50 +33,37 @@ body {
   right: 0;
 }
 
-.onglets {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
+/* ABOUT ME PAGE*/
+
 .aboutme {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  max-height: 100vh;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
   right: -65%;
-  transition: 1s;
-}
-.aboutmeopen {
-  position: absolute;
-  max-height: 100vh;
-  width: 100%;
-  height: 100%;
-  right: 0;
-  bottom: 0;
-  transition: 1s;
-}
-
-.aboutmepage {
-  display: flex;
-  position: absolute;
-  border-radius: 2vh / 5vh;
   margin: 0;
   padding: 0;
   z-index: 998;
   color: #000000a6;
-  box-shadow: -10px 0px 20px black;
+  box-shadow: -10px 2px 20px black;
   opacity: 1;
-  max-height: 100%;
-  height: 100vh;
-  width: 100%;
   background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
   background-position: top;
   background-size: 100% 0;
-  transition: color 2s, background-size 1.5s ease-in-out;
+  transition: color 2s, background-size 1.5s, right 1s ease-in-out;
   border-left: thin #000000;
   background-color: rgba(70, 70, 70, 0.09);
+  overflow: hidden;
 }
-.aboutmepage:hover {
+.aboutmeopen {
+  right: 0;
+  bottom: 0;
+  transition: color 2s, background-size 1.5s, right 1s ease-in-out;
+}
+
+.aboutme:hover {
   cursor: pointer;
   color: rgb(255, 254, 208);
   background-size: 100% 100%;
@@ -86,8 +72,7 @@ body {
 }
 
 h1 {
-  position: absolute;
-  font-size: 1.8vh;
+  font-size: 1rem;
   margin: 0;
   padding: 1%;
   max-height: 3vh;
@@ -95,57 +80,54 @@ h1 {
   background: linear-gradient(
       to top,
       #000000a6 0%,
-      #000000a6 2px,
-      transparent 3px
+      #000000a6 1px,
+      transparent 1.1px
     )
     no-repeat;
   background-size: 0 100%;
   transition: background-size 1s ease;
 }
+
+.aboutmecontent {
+  margin: 0;
+  padding: 1%;
+  width: 73%;
+  height: 100%;
+}
 h1:hover {
   background-size: 100% 100%;
 }
 
+/* ACHIEVEMENTS PAGE*/
+
 .achievements {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  box-shadow: -1vw 0 #0000;
-  max-height: 100vh;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
   right: -75%;
-  transition: 1s;
-}
-.achievementsopen {
-  position: absolute;
-  max-height: 100vh;
-  width: 100%;
-  height: 100%;
-  right: 0;
-  transition: 1s;
-}
-
-.achievementspage {
-  display: flex;
-  position: absolute;
-  border-radius: 2vh / 5vh;
   margin: 0;
   padding: 0;
   z-index: 999;
   color: #000000a6;
-  box-shadow: -10px 0px 20px black;
+  box-shadow: -10px 2px 20px black;
   opacity: 1;
-  max-height: 100%;
-  height: 100vh;
-  width: 100%;
-
   background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
   background-position: top;
   background-size: 100% 0;
-  transition: color 2s, background-size 1.5s ease-in-out;
+  transition: color 2s, background-size 1.5s, right 1s ease-in-out;
   border-left: thin #000000;
   background-color: #48484882;
+  overflow: hidden;
 }
-.achievementspage:hover {
+.achievementsopen {
+  right: -10%;
+  transition: color 2s, background-size 1.5s, right 1s ease-in-out;
+}
+
+.achievements:hover {
   cursor: pointer;
   color: rgb(240, 246, 122);
   background-size: 100% 100%;
@@ -153,8 +135,7 @@ h1:hover {
   opacity: 1;
 }
 h2 {
-  position: absolute;
-  font-size: 1.8vh;
+  font-size: 1rem;
   margin: 0;
   padding: 1%;
   max-height: 3vh;
@@ -162,8 +143,8 @@ h2 {
   background: linear-gradient(
       to top,
       #000000a6 0%,
-      #000000a6 2px,
-      transparent 3px
+      #000000a6 1px,
+      transparent 1.1px
     )
     no-repeat;
   background-size: 0 100%;
@@ -172,44 +153,43 @@ h2 {
 h2:hover {
   background-size: 100% 100%;
 }
+.achievementscontent {
+  margin: 0;
+  padding: 1%;
+  width: 73%;
+  height: 100%;
+}
+
+/* CONTACT PAGE */
 
 .contact {
+  display: flex;
+  flex-direction: column;
   position: absolute;
+  align-items: flex-start;
   max-height: 100%;
   width: 100%;
   height: 100%;
   right: -87%;
-  transition: 1s;
-}
-.contactopen {
-  position: absolute;
-  max-height: 100vh;
-  width: 100%;
-  height: 100%;
-  right: 0;
-  transition: 1s;
-}
-.contactpage {
-  display: flex;
-  position: absolute;
-  border-radius: 2vh / 5vh;
   margin: 0;
   padding: 0;
   z-index: 1000;
   color: #000000a6;
-  box-shadow: -10px 0px 20px black;
+  box-shadow: -10px 2px 20px black;
   opacity: 1;
-  max-height: 100%;
-  height: 100vh;
-  width: 100%;
   background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
   background-position: top;
   background-size: 100% 0;
-  transition: color 2s, background-size 1.5s ease-in-out;
+  transition: color 2s, background-size 1.5s, right 1s ease-in-out;
   border-left: thin #000000;
   background-color: #c1c1c194;
 }
-.contactpage:hover {
+.contactopen {
+  right: -25%;
+  transition: color 2s, background-size 1.5s, right 1s ease-in-out;
+}
+
+.contact:hover {
   cursor: pointer;
   color: rgb(239, 173, 98);
   background-size: 100% 100%;
@@ -217,8 +197,7 @@ h2:hover {
   opacity: 1;
 }
 h3 {
-  position: absolute;
-  font-size: 1.8vh;
+  font-size: 1rem;
   margin: 0;
   padding: 1%;
   max-height: 3vh;
@@ -226,8 +205,8 @@ h3 {
   background: linear-gradient(
       to top,
       #000000a6 0%,
-      #000000a6 2px,
-      transparent 3px
+      #000000a6 1px,
+      transparent 1.1px
     )
     no-repeat;
   background-size: 0 100%;
@@ -236,232 +215,123 @@ h3 {
 h3:hover {
   background-size: 100% 100%;
 }
-
-@media screen and (max-width: 1200px) and (min-width: 700px) and (orientation: portrait) {
-  .aboutme {
-    position: absolute;
-    max-height: 100%;
-    max-width: 100vw;
-    right: -60%;
-    bottom: 70%;
-  }
-  .aboutmeopen {
-    position: absolute;
-    max-height: 100vh;
-    width: 100%;
-    height: 100%;
-    right: 0;
-    bottom: 0;
-    transition: 1s;
-  }
-  .aboutmepage {
-    width: 100vw;
-    height: 100%;
-    border-radius: 1%;
-    background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
-    background-position: top;
-    background-size: 100% 0;
-    transition: color 2s, background-size 1.5s ease-in-out;
-    border-bottom: thin #000000;
-  }
-  .aboutmepage:hover {
-    background-size: 100% 100%;
-    background-position: bottom;
-    opacity: 1;
-  }
-  h1 {
-    background: none;
-    bottom: 1%;
-  }
-  .achievements {
-    position: absolute;
-    box-shadow: -1vw 0 #0000;
-    max-height: 100vh;
-    width: 100%;
-    height: 100%;
-    right: -70%;
-    bottom: 80%;
-    transition: 1s;
-  }
-  .achievementsopen {
-    position: absolute;
-    max-height: 100vh;
-    width: 100%;
-    height: 100%;
-    right: 0;
-    bottom: 0;
-    transition: 1s;
-  }
-  .achievementspage {
-    width: 100vw;
-    height: 100%;
-    border-radius: 1%;
-    background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
-    background-position: top;
-    background-size: 100% 0;
-    transition: color 2s, background-size 1.5s ease-in-out;
-    border-bottom: thin #000000;
-    background-color: #48484882;
-  }
-  .achievementspage:hover {
-    background-size: 100% 100%;
-    background-position: bottom;
-    opacity: 1;
-  }
-  h2 {
-    bottom: 1%;
-    background: none;
-  }
-  .contact {
-    position: absolute;
-    max-height: 100%;
-    width: 100%;
-    height: 100%;
-    right: -80%;
-    bottom: 90%;
-    transition: 1s;
-  }
-  .contactopen {
-    position: absolute;
-    max-height: 100vh;
-    width: 100%;
-    height: 100%;
-    right: 0;
-    bottom: 0;
-    transition: 1s;
-  }
-  .contactpage {
-    width: 100vw;
-    height: 100%;
-    border-radius: 1%;
-    background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
-    background-position: top;
-    background-size: 100% 0;
-    transition: color 2s, background-size 1.5s ease-in-out;
-    border-bottom: thin #000000;
-    background-color: #c1c1c194;
-  }
-  .contactpage:hover {
-    background-size: 100% 100%;
-    background-position: bottom;
-    opacity: 1;
-  }
-  h3 {
-    background: none;
-    bottom: 1%;
-  }
+.contactcontent {
+  margin: 0;
+  padding: 1%;
+  width: 73%;
+  height: 100%;
 }
 
-@media screen and (max-width: 700px) {
+/* MEDIA QUERIES*/
+
+@media screen and (max-width: 1200px) {
   .aboutme {
-    max-height: 100%;
-    max-width: 100vw;
+    flex-direction: column-reverse;
     right: -60%;
     bottom: 70%;
-  }
-  .aboutmeopen {
-    position: absolute;
-    max-height: 100vh;
     width: 100%;
     height: 100%;
-    right: 0;
-    bottom: 0;
-    transition: 1s;
-  }
-  .aboutmepage {
-    width: 100vw;
-    height: 100%;
-    border-radius: 1%;
     background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
     background-position: top;
     background-size: 100% 0;
-    transition: color 2s, background-size 1.5s ease-in-out;
+    transition: color 2s, background-size 1.5s, bottom 1.8s,
+      right 1s ease-in-out;
     border-bottom: thin #000000;
   }
-  .aboutmepage:hover {
+  .aboutmeopen {
+    right: 0;
+    bottom: 0;
+    transition: color 2s, background-size 1.5s, bottom 1.8s,
+      right 1s ease-in-out;
+  }
+
+  .aboutme:hover {
     background-size: 100% 100%;
     background-position: bottom;
     opacity: 1;
   }
   h1 {
     background: none;
-    bottom: 1%;
+    bottom: 1px;
+  }
+  .aboutmecontent {
+    margin-top: 20%;
+    padding-top: 20%;
+    width: 73%;
+    height: 100%;
   }
   .achievements {
     position: absolute;
-    box-shadow: -1vw 0 #0000;
-    max-height: 100vh;
-    width: 100%;
-    height: 100%;
+    flex-direction: column-reverse;
     right: -70%;
     bottom: 80%;
-    transition: 1s;
-  }
-  .achievementsopen {
-    position: absolute;
-    max-height: 100vh;
     width: 100%;
     height: 100%;
-    right: 0;
-    bottom: 0;
-    transition: 1s;
-  }
-  .achievementspage {
-    width: 100vw;
-    height: 100%;
-    border-radius: 1%;
     background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
     background-position: top;
     background-size: 100% 0;
-    transition: color 2s, background-size 1.5s ease-in-out;
+    transition: color 2s, background-size 1.5s, bottom 1.8s,
+      right 1s ease-in-out;
     border-bottom: thin #000000;
     background-color: #48484882;
   }
-  .achievementspage:hover {
+  .achievementsopen {
+    right: -10%;
+    bottom: 10%;
+    transition: color 2s, background-size 1.5s, bottom 1.8s,
+      right 1s ease-in-out;
+  }
+
+  .achievements:hover {
     background-size: 100% 100%;
     background-position: bottom;
     opacity: 1;
   }
   h2 {
-    bottom: 1%;
+    bottom: 1px;
     background: none;
+  }
+  .achievementscontent {
+    margin-top: 20%;
+    padding-top: 20%;
+    width: 73%;
+    height: 100%;
   }
   .contact {
     position: absolute;
-    max-height: 100%;
-    width: 100%;
-    height: 100%;
+    flex-direction: column-reverse;
     right: -80%;
     bottom: 90%;
-    transition: 1s;
-  }
-  .contactopen {
-    position: absolute;
-    max-height: 100vh;
     width: 100%;
     height: 100%;
-    right: 0;
-    bottom: 0;
-    transition: 1s;
-  }
-  .contactpage {
-    width: 100vw;
-    height: 100%;
-    border-radius: 1%;
     background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
     background-position: top;
     background-size: 100% 0;
-    transition: color 2s, background-size 1.5s ease-in-out;
+    transition: color 2s, background-size 1.5s, bottom 1.7s,
+      right 1s ease-in-out;
     border-bottom: thin #000000;
     background-color: #c1c1c194;
   }
-  .contactpage:hover {
+  .contactopen {
+    right: -25%;
+    bottom: 25%;
+    transition: color 2s, background-size 1.5s, bottom 1.7s,
+      right 1s ease-in-out;
+  }
+
+  .contact:hover {
     background-size: 100% 100%;
     background-position: bottom;
     opacity: 1;
   }
   h3 {
     background: none;
-    bottom: 1%;
+    bottom: 1px;
+  }
+  .contactcontent {
+    margin-top: 20%;
+    padding-top: 20%;
+    width: 73%;
+    height: 100%;
   }
 }
