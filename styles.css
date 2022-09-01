@@ -38,7 +38,7 @@ body {
 
 .aboutme {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: absolute;
   align-items: flex-start;
   width: 100%;
@@ -73,11 +73,10 @@ body {
 }
 
 h1 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin: 0;
   padding: 1%;
-  max-height: 3vh;
-  letter-spacing: 0.02em;
+  letter-spacing: 1em;
   background: linear-gradient(
       to top,
       #000000a6 0%,
@@ -87,9 +86,16 @@ h1 {
     no-repeat;
   background-size: 0 100%;
   transition: background-size 1s ease;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  text-transform: uppercase;
 }
 
 .aboutmecontent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  line-height: 4rem;
   margin: 0;
   padding: 1%;
   width: 73%;
@@ -103,7 +109,7 @@ h1:hover {
 
 .achievements {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: absolute;
   align-items: flex-start;
   width: 100%;
@@ -136,11 +142,10 @@ h1:hover {
   opacity: 1;
 }
 h2 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin: 0;
   padding: 1%;
-  max-height: 3vh;
-  letter-spacing: 0.02em;
+  letter-spacing: 1em;
   background: linear-gradient(
       to top,
       #000000a6 0%,
@@ -150,6 +155,9 @@ h2 {
     no-repeat;
   background-size: 0 100%;
   transition: background-size 1s ease;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  text-transform: uppercase;
 }
 h2:hover {
   background-size: 100% 100%;
@@ -165,7 +173,7 @@ h2:hover {
 
 .contact {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: absolute;
   align-items: flex-start;
   max-height: 100%;
@@ -198,11 +206,10 @@ h2:hover {
   opacity: 1;
 }
 h3 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin: 0;
   padding: 1%;
-  max-height: 3vh;
-  letter-spacing: 0.02em;
+  letter-spacing: 1em;
   background: linear-gradient(
       to top,
       #000000a6 0%,
@@ -212,6 +219,9 @@ h3 {
     no-repeat;
   background-size: 0 100%;
   transition: background-size 1s ease;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  text-transform: uppercase;e
 }
 h3:hover {
   background-size: 100% 100%;
@@ -233,15 +243,13 @@ h3:hover {
     background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
     background-position: top;
     background-size: 100% 0;
-    transition: color 2s, background-size 1.5s, bottom 1.8s,
+    transition: color 2s, background-size 1.5s, bottom 1s ease-in-out,
       right 1s ease-in-out;
     border-bottom: thin #000000;
   }
   .aboutmeopen {
     right: 0;
     bottom: 0;
-    transition: color 2s, background-size 1.5s, bottom 1.8s,
-      right 1s ease-in-out;
   }
 
   .aboutme:hover {
@@ -255,6 +263,9 @@ h3:hover {
     bottom: 1px;
     background: none;
     font-size: small;
+    writing-mode:horizontal-tb;
+    letter-spacing: 0.02em;
+    text-transform: none;
   }
   .aboutmecontent {
     margin-top: 20%;
@@ -272,7 +283,7 @@ h3:hover {
     background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
     background-position: top;
     background-size: 100% 0;
-    transition: color 2s, background-size 1.5s, bottom 1.8s,
+    transition: color 2s, background-size 1.5s, bottom 1s ease-in-out,
       right 1s ease-in-out;
     border-bottom: thin #000000;
     background-color: #48484882;
@@ -280,8 +291,6 @@ h3:hover {
   .achievementsopen {
     right: -10%;
     bottom: 10%;
-    transition: color 2s, background-size 1.5s, bottom 1.8s,
-      right 1s ease-in-out;
   }
 
   .achievements:hover {
@@ -306,7 +315,7 @@ h3:hover {
     background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
     background-position: top;
     background-size: 100% 0;
-    transition: color 2s, background-size 1.5s, bottom 1.7s,
+    transition: color 2s, background-size 1.5s, bottom 1s ease-in-out,
       right 1s ease-in-out;
     border-bottom: thin #000000;
     background-color: #c1c1c194;
@@ -314,8 +323,6 @@ h3:hover {
   .contactopen {
     right: -25%;
     bottom: 25%;
-    transition: color 2s, background-size 1.5s, bottom 1.7s,
-      right 1s ease-in-out;
   }
 
   .contact:hover {
