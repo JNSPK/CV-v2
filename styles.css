@@ -10,7 +10,17 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: url("https://zupimages.net/up/22/41/7i5a.png"), auto;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
+
+
+
 
 /* GENERIC */
 
@@ -62,21 +72,21 @@ body {
   right: 0;
   bottom: 0;
   transition: color 2s, background-size 1.5s, right 1s ease-in-out;
-}
-
-.aboutme:hover {
-  cursor: pointer;
   color: rgb(255, 254, 208);
   background-size: 100% 100%;
   background-position: bottom;
   opacity: 1;
 }
 
+.aboutme:hover {
+  cursor: url("https://zupimages.net/up/22/41/0p3w.png"), auto;
+}
+
 h1 {
   font-size: 0.8rem;
   margin: 0;
   padding: 1%;
-  letter-spacing: 1em;
+  letter-spacing: 0.6em;
   background: linear-gradient(
       to top,
       #000000a6 0%,
@@ -90,6 +100,11 @@ h1 {
   text-orientation: upright;
   text-transform: uppercase;
 }
+h1:hover {
+  cursor: url("https://zupimages.net/up/22/41/0p3w.png"), auto;
+  background-size: 100% 100%;
+}
+
 
 .aboutmecontent {
   display: flex;
@@ -100,10 +115,15 @@ h1 {
   padding: 1%;
   width: 73%;
   height: 100%;
+  color: transparent;
+  transition: color 1s;
 }
-h1:hover {
-  background-size: 100% 100%;
+.aboutmecontentvisible {
+  animation: Slide_Up 3s ease;
+  transition: color 3s;
+  color: rgb(255, 254, 208);
 }
+
 
 /* ACHIEVEMENTS PAGE*/
 
@@ -132,20 +152,20 @@ h1:hover {
 .achievementsopen {
   right: -10%;
   transition: color 2s, background-size 1.5s, right 1s ease-in-out;
-}
-
-.achievements:hover {
-  cursor: pointer;
   color: rgb(240, 246, 122);
   background-size: 100% 100%;
   background-position: bottom;
   opacity: 1;
 }
+
+.achievements:hover {
+  cursor: url("https://zupimages.net/up/22/41/0p3w.png"), auto;
+}
 h2 {
   font-size: 0.8rem;
   margin: 0;
   padding: 1%;
-  letter-spacing: 1em;
+  letter-spacing: 0.6em;
   background: linear-gradient(
       to top,
       #000000a6 0%,
@@ -160,20 +180,36 @@ h2 {
   text-transform: uppercase;
 }
 h2:hover {
+  cursor: url("https://zupimages.net/up/22/41/0p3w.png"), auto;
   background-size: 100% 100%;
 }
 .achievementscontent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  line-height: 3rem;
   margin: 0;
   padding: 1%;
-  width: 73%;
+  width: 70%;
   height: 100%;
+  color: transparent;
+  transition: color 1s;
+  font-size: 0.9em;
 }
+.achievementscontentvisible {
+  animation: Slide_Up 3s ease;
+  transition: color 3s;
+  color: rgb(240, 246, 122);
+}
+
+
 
 /* CONTACT PAGE */
 
 .contact {
   display: flex;
-  flex-direction: row;
+  flex-flow: column wrap;
   position: absolute;
   align-items: flex-start;
   max-height: 100%;
@@ -196,20 +232,21 @@ h2:hover {
 .contactopen {
   right: -25%;
   transition: color 2s, background-size 1.5s, right 1s ease-in-out;
-}
-
-.contact:hover {
-  cursor: pointer;
   color: rgb(239, 173, 98);
   background-size: 100% 100%;
   background-position: bottom;
   opacity: 1;
 }
+
+.contact:hover {
+  cursor: url("https://zupimages.net/up/22/41/0p3w.png"), auto;
+}
+
 h3 {
   font-size: 0.8rem;
   margin: 0;
   padding: 1%;
-  letter-spacing: 1em;
+  letter-spacing: 0.6em;
   background: linear-gradient(
       to top,
       #000000a6 0%,
@@ -221,16 +258,51 @@ h3 {
   transition: background-size 1s ease;
   writing-mode: vertical-lr;
   text-orientation: upright;
-  text-transform: uppercase;e
+  text-transform: uppercase;
 }
+
 h3:hover {
+  cursor: url("https://zupimages.net/up/22/41/0p3w.png"), auto;
   background-size: 100% 100%;
 }
 .contactcontent {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content :center;
+  line-height: 5rem;
   margin: 0;
   padding: 1%;
   width: 73%;
   height: 100%;
+  color: transparent;
+  transition: color 1s;
+}
+.contactcontentvisible {
+  animation: Slide_Up 3s ease;
+  transition: color 3s;
+  color: rgb(239, 173, 98);
+}
+.links{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  animation: Slide_Up 6s ease;
+  justify-content:space-around;
+  align-items:center;
+  width: 50%;
+  height: 50%;
+}
+
+
+@keyframes Slide_Up {
+  0%{
+    transform: translateY(10vh);
+  }
+  100%{
+    transform: translateY(0);
+  }
 }
 
 /* MEDIA QUERIES*/
@@ -250,13 +322,11 @@ h3:hover {
   .aboutmeopen {
     right: 0;
     bottom: 0;
-  }
-
-  .aboutme:hover {
     background-size: 100% 100%;
     background-position: bottom;
     opacity: 1;
   }
+
   h1,
   h2,
   h3 {
@@ -291,9 +361,6 @@ h3:hover {
   .achievementsopen {
     right: -10%;
     bottom: 10%;
-  }
-
-  .achievements:hover {
     background-size: 100% 100%;
     background-position: bottom;
     opacity: 1;
@@ -323,9 +390,6 @@ h3:hover {
   .contactopen {
     right: -25%;
     bottom: 25%;
-  }
-
-  .contact:hover {
     background-size: 100% 100%;
     background-position: bottom;
     opacity: 1;
