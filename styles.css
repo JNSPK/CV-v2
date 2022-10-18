@@ -110,6 +110,7 @@ h1:hover {
 
 .aboutmecontent {
   display: flex;
+  text-align:center;
   align-items: center;
   justify-content: center;
   line-height: 4rem;
@@ -191,7 +192,6 @@ h2:hover {
 }
 .achievementscontent {
   display: flex;
-  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-around;
   line-height: 3rem;
@@ -316,15 +316,12 @@ h3:hover {
 
 @media screen and (max-width: 1200px) and (orientation: portrait) {
 
-  .body{
-    height: 90%;
-    width: 90%;
-  }
 
   h1,
   h2,
   h3 {
-    bottom: 1px;
+    padding: 5%;
+    bottom:0;
     background: none;
     font-size: small;
     writing-mode:horizontal-tb;
@@ -333,6 +330,7 @@ h3:hover {
   }
   .aboutme {
     flex-direction: column-reverse;
+    align-items: center;
     right: 0;
     bottom: 70%;
     background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
@@ -353,16 +351,24 @@ h3:hover {
 
 
   .aboutmecontent {
-    max-width:100%;
-    max-height: 100%;
+    width: 70%;
     line-height: 2rem;
     font-size: x-small;
+    text-align:center;
     justify-content:center;
     align-items:center;
+  }
+
+  .aboutmecontent.visible{
+    margin: 0;
+    padding: 0;
+    width: 70%;
+    height: 100%;
   }
   .achievements {
     position: absolute;
     flex-direction: column-reverse;
+    align-items: center;
     right: 0;
     bottom: 80%;
     width: 100%;
@@ -385,12 +391,18 @@ h3:hover {
   }
 
   .achievementscontent {
-    width:100%;
+    width:70%;
     height: 100%;
     line-height: 2rem;
     font-size: x-small;
-    justify-content:space-around;
-    
+    justify-content:center;
+    align-items:center;
+  }
+  .achievementscontent.visible{
+    margin: 0;
+    padding: 0;
+    width: 70%;
+    height: 100%;
   }
   ul {
     display: flex;
@@ -401,9 +413,11 @@ h3:hover {
     justify-content: center;
   }
 
+
   .contact {
     position: absolute;
     flex-direction: column-reverse;
+    align-items: center;
     right: 0;
     bottom: 90%;
     width: 100%;
@@ -436,10 +450,6 @@ h3:hover {
 
 @media screen and (max-width:900px) and (orientation: landscape) {
 
-  .body{
-    height: 100%;
-    width: 100%;
-  }
   h1,
   h2,
   h3 {
@@ -452,6 +462,7 @@ h3:hover {
   }
   .aboutme {
     flex-direction: column-reverse;
+    align-items: center;
     right: 0;
     bottom: 70%;
     background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
@@ -486,6 +497,8 @@ h3:hover {
   .achievements {
     position: absolute;
     flex-direction: column-reverse;
+    align-items: center;
+    justify-content:end;
     right: 0;
     bottom: 80%;
     width: 100%;
@@ -508,7 +521,15 @@ h3:hover {
   }
 
   .achievementscontent {
-    width:100%;
+    width:70%;
+    height: 80%;
+    line-height: 0.5rem;
+    font-size :x-small;
+    justify-content:space-around;
+    align-items:center;
+  }
+  .achievementscontent.visible {
+    width:70%;
     height: 80%;
     line-height: 0.5rem;
     font-size :x-small;
@@ -517,17 +538,16 @@ h3:hover {
   }
 
   ul {
-    display: flex;
-    flex-direction: column;
+    text-align: center;
     line-height: 2rem;
-    padding-left: 5vw;
     margin: 0;
-    justify-content: center;
+    padding: 0;
   }
 
   .contact {
     position: absolute;
     flex-direction: column-reverse;
+    align-items: center;
     right: 0;
     bottom: 90%;
     width: 100%;
@@ -549,7 +569,7 @@ h3:hover {
   }
 
   .contactcontent {
-    width:100%;
+    width:70%;
     height: 100%;
     line-height: 2rem;
     font-size: x-small;
