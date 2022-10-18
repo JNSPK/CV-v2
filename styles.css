@@ -18,10 +18,6 @@ body {
   user-select: none;
 }
 
-
-
-
-
 /* GENERIC */
 
 .backgroundimg {
@@ -103,14 +99,12 @@ h1 {
   text-transform: uppercase;
 }
 h1:hover {
-  cursor: url("https://zupimages.net/up/22/41/0p3w.png"), auto;
   background-size: 100% 100%;
 }
 
-
 .aboutmecontent {
   display: flex;
-  text-align:center;
+  text-align: center;
   align-items: center;
   justify-content: center;
   line-height: 4rem;
@@ -121,7 +115,7 @@ h1:hover {
   color: transparent;
   transition: color 1s;
 }
-.aboutmecontent.visible {
+.aboutme.open .aboutmecontent {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -129,7 +123,6 @@ h1:hover {
   transition: color 3s;
   color: rgb(255, 254, 208);
 }
-
 
 /* ACHIEVEMENTS PAGE*/
 
@@ -187,7 +180,6 @@ h2 {
   text-transform: uppercase;
 }
 h2:hover {
-  cursor: url("https://zupimages.net/up/22/41/0p3w.png"), auto;
   background-size: 100% 100%;
 }
 .achievementscontent {
@@ -203,14 +195,13 @@ h2:hover {
   transition: color 1s;
   font-size: 0.9em;
 }
-.achievementscontent.visible {
+
+.achievements.open .achievementscontent {
   padding: 0;
   animation: Slide_Up 3s ease;
   transition: color 3s;
   color: rgb(240, 246, 122);
 }
-
-
 
 /* CONTACT PAGE */
 
@@ -269,14 +260,13 @@ h3 {
 }
 
 h3:hover {
-  cursor: url("https://zupimages.net/up/22/41/0p3w.png"), auto;
   background-size: 100% 100%;
 }
 .contactcontent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content :center;
+  justify-content: center;
   line-height: 5rem;
   margin: 0;
   padding: 0;
@@ -285,29 +275,28 @@ h3:hover {
   color: transparent;
   transition: color 1s;
 }
-.contactcontent.visible {
+.contact.open .contactcontent {
   padding: 0;
   animation: Slide_Up 3s ease;
   transition: color 3s;
   color: rgb(239, 173, 98);
 }
-.links{
+.links {
   display: flex;
   margin: 0;
   padding: 0;
   animation: Slide_Up 6s ease;
-  justify-content:space-around;
-  align-items:center;
+  justify-content: space-around;
+  align-items: center;
   width: 50%;
   height: 50%;
 }
 
-
 @keyframes Slide_Up {
-  0%{
+  0% {
     transform: translateY(10vh);
   }
-  100%{
+  100% {
     transform: translateY(0);
   }
 }
@@ -315,16 +304,14 @@ h3:hover {
 /* MEDIA QUERIES*/
 
 @media screen and (max-width: 1200px) and (orientation: portrait) {
-
-
   h1,
   h2,
   h3 {
     padding: 5%;
-    bottom:0;
+    bottom: 0;
     background: none;
     font-size: small;
-    writing-mode:horizontal-tb;
+    writing-mode: horizontal-tb;
     letter-spacing: 0.02em;
     text-transform: uppercase;
   }
@@ -349,17 +336,16 @@ h3:hover {
     transition: background-size 1.5s, bottom 1s ease-in-out;
   }
 
-
   .aboutmecontent {
     width: 70%;
     line-height: 2rem;
     font-size: x-small;
-    text-align:center;
-    justify-content:center;
-    align-items:center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
-  .aboutmecontent.visible{
+  .aboutmecontent.visible {
     margin: 0;
     padding: 0;
     width: 70%;
@@ -391,14 +377,14 @@ h3:hover {
   }
 
   .achievementscontent {
-    width:70%;
+    width: 70%;
     height: 100%;
     line-height: 2rem;
     font-size: x-small;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
   }
-  .achievementscontent.visible{
+  .achievementscontent.visible {
     margin: 0;
     padding: 0;
     width: 70%;
@@ -412,7 +398,6 @@ h3:hover {
     margin: 0;
     justify-content: center;
   }
-
 
   .contact {
     position: absolute;
@@ -439,7 +424,7 @@ h3:hover {
   }
 
   .contactcontent {
-    width:100%;
+    width: 100%;
     height: 100%;
     line-height: 2rem;
     font-size: x-small;
@@ -448,15 +433,14 @@ h3:hover {
   }
 }
 
-@media screen and (max-width:900px) and (orientation: landscape) {
-
+@media screen and (max-width: 900px) and (orientation: landscape) {
   h1,
   h2,
   h3 {
     bottom: 1px;
     background: none;
     font-size: smaller;
-    writing-mode:horizontal-tb;
+    writing-mode: horizontal-tb;
     letter-spacing: 0.02em;
     text-transform: uppercase;
   }
@@ -481,10 +465,8 @@ h3:hover {
     transition: background-size 1.5s, bottom 1s ease-in-out;
   }
 
-
   .aboutmecontent {
-  
-    width:100%;
+    width: 100%;
     height: 80%;
     line-height: 2rem;
     font-size: x-small;
@@ -498,7 +480,7 @@ h3:hover {
     position: absolute;
     flex-direction: column-reverse;
     align-items: center;
-    justify-content:end;
+    justify-content: end;
     right: 0;
     bottom: 80%;
     width: 100%;
@@ -521,20 +503,20 @@ h3:hover {
   }
 
   .achievementscontent {
-    width:70%;
+    width: 70%;
     height: 80%;
     line-height: 0.5rem;
-    font-size :x-small;
-    justify-content:space-around;
-    align-items:center;
+    font-size: x-small;
+    justify-content: space-around;
+    align-items: center;
   }
   .achievementscontent.visible {
-    width:70%;
+    width: 70%;
     height: 80%;
     line-height: 0.5rem;
-    font-size :x-small;
-    justify-content:space-around;
-    align-items:center;
+    font-size: x-small;
+    justify-content: space-around;
+    align-items: center;
   }
 
   ul {
@@ -569,7 +551,7 @@ h3:hover {
   }
 
   .contactcontent {
-    width:70%;
+    width: 70%;
     height: 100%;
     line-height: 2rem;
     font-size: x-small;
