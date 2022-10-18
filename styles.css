@@ -68,7 +68,7 @@ body {
   background-color: rgba(70, 70, 70, 0.09);
   overflow: hidden;
 }
-.aboutmeopen {
+.aboutme.open {
   right: 0;
   bottom: 0;
   transition: color 2s, background-size 1.5s, right 1s ease-in-out;
@@ -118,7 +118,7 @@ h1:hover {
   color: transparent;
   transition: color 1s;
 }
-.aboutmecontentvisible {
+.aboutmecontent.visible {
   animation: Slide_Up 3s ease;
   transition: color 3s;
   color: rgb(255, 254, 208);
@@ -149,7 +149,7 @@ h1:hover {
   background-color: #48484882;
   overflow: hidden;
 }
-.achievementsopen {
+.achievements.open {
   right: -10%;
   transition: color 2s, background-size 1.5s, right 1s ease-in-out;
   color: rgb(240, 246, 122);
@@ -197,7 +197,7 @@ h2:hover {
   transition: color 1s;
   font-size: 0.9em;
 }
-.achievementscontentvisible {
+.achievementscontent.visible {
   animation: Slide_Up 3s ease;
   transition: color 3s;
   color: rgb(240, 246, 122);
@@ -229,7 +229,7 @@ h2:hover {
   border-left: thin #000000;
   background-color: #c1c1c194;
 }
-.contactopen {
+.contact.open {
   right: -25%;
   transition: color 2s, background-size 1.5s, right 1s ease-in-out;
   color: rgb(239, 173, 98);
@@ -279,7 +279,7 @@ h3:hover {
   color: transparent;
   transition: color 1s;
 }
-.contactcontentvisible {
+.contactcontent.visible {
   animation: Slide_Up 3s ease;
   transition: color 3s;
   color: rgb(239, 173, 98);
@@ -308,9 +308,14 @@ h3:hover {
 /* MEDIA QUERIES*/
 
 @media screen and (max-width: 1200px) and (orientation: portrait) {
+
+  .body{
+    height: 90%;
+    width: 90%;
+  }
   .aboutme {
     flex-direction: column-reverse;
-    right: -60%;
+    right: 0;
     bottom: 70%;
     background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
     background-position: top;
@@ -319,7 +324,7 @@ h3:hover {
       right 1s ease-in-out;
     border-bottom: thin #000000;
   }
-  .aboutmeopen {
+  .aboutme.open {
     right: 0;
     bottom: 0;
     background-size: 100% 100%;
@@ -335,18 +340,21 @@ h3:hover {
     font-size: small;
     writing-mode:horizontal-tb;
     letter-spacing: 0.02em;
-    text-transform: none;
+    text-transform: uppercase;
   }
   .aboutmecontent {
-    margin-top: 20%;
-    padding-top: 20%;
-    width: 73%;
+  
+    width:100%;
     height: 100%;
+    line-height: 2rem;
+    font-size: smaller;
+    justify-content: center;
+    align-items: center;
   }
   .achievements {
     position: absolute;
     flex-direction: column-reverse;
-    right: -70%;
+    right: 0;
     bottom: 80%;
     width: 100%;
     height: 100%;
@@ -358,24 +366,35 @@ h3:hover {
     border-bottom: thin #000000;
     background-color: #48484882;
   }
-  .achievementsopen {
-    right: -10%;
-    bottom: 10%;
+  .achievements.open {
+    right: 0;
+    bottom: 0;
     background-size: 100% 100%;
     background-position: bottom;
     opacity: 1;
   }
 
   .achievementscontent {
-    margin-top: 20%;
-    padding-top: 20%;
-    width: 73%;
+    width:100%;
     height: 100%;
+    line-height: 2rem;
+    font-size: smaller;
+    justify-content:space-around;
+    
   }
+  ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+    padding-left: 5vw;
+    margin: 0;
+    justify-content: center;
+  }
+
   .contact {
     position: absolute;
     flex-direction: column-reverse;
-    right: -80%;
+    right: 0;
     bottom: 90%;
     width: 100%;
     height: 100%;
@@ -387,18 +406,20 @@ h3:hover {
     border-bottom: thin #000000;
     background-color: #c1c1c194;
   }
-  .contactopen {
-    right: -25%;
-    bottom: 25%;
+  .contact.open {
+    right: 0;
+    bottom: 0;
     background-size: 100% 100%;
     background-position: bottom;
     opacity: 1;
   }
 
   .contactcontent {
-    margin-top: 20%;
-    padding-top: 20%;
-    width: 73%;
+    width:100%;
     height: 100%;
+    line-height: 2rem;
+    font-size: smaller;
+    justify-content: center;
+    align-items: center;
   }
 }
