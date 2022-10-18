@@ -30,33 +30,26 @@ const AboutMe = document.querySelector(".aboutme");
 const Achievements = document.querySelector(".achievements");
 const Contact = document.querySelector(".contact");
 
-//textes//
-
-const AboutMeContent = document.querySelector(".aboutmecontent");
-const AchievementsContent= document.querySelector(".achievementscontent");
-const ContactContent = document.querySelector(".contactcontent");
-
-let visible = false;
-
+function hideAllTabs() {
+  AboutMe.classList.remove("open");
+  Achievements.classList.remove("open");
+  Contact.classList.remove("open");
+}
 //comportement//
+const toggleContent = ($content) => () => {
+  const isOpen = $content.classList.contains("open");
+  hideAllTabs();
+  if (isOpen) {
+    return;
+  }
+  $content.classList.add("open");
+};
 
-AboutMe.addEventListener("click",  () => {
-  visible = !visible;
-  visible ? AboutMe.classList.add('open') + AboutMeContent.classList.add('visible') : AboutMe.classList.remove('open') + AboutMeContent.classList.remove('visible');
-});
+AboutMe.addEventListener("click", toggleContent(AboutMe));
 
-Achievements.addEventListener("click",  () => {
-  visible = !visible;
-  visible ? Achievements.classList.add('open') + AchievementsContent.classList.add('visible') : Achievements.classList.remove('open') + AchievementsContent.classList.remove('visible') + AboutMe.classList.remove('open') + AboutMeContent.classList.remove('visible');
-});
+Achievements.addEventListener("click", toggleContent(Achievements));
 
-Contact.addEventListener("click",  () => {
-  visible = !visible;
-  visible ? Contact.classList.add('open') + ContactContent.classList.add('visible') : Contact.classList.remove('open') + ContactContent.classList.remove('visible') + AboutMe.classList.remove('open') + Achievements.classList.remove('open')+ AchievementsContent.classList.remove('visible') +AboutMeContent.classList.remove('visible');
-});
-
-
-
+Contact.addEventListener("click", toggleContent(Contact));
 
 /*
 
