@@ -69,6 +69,8 @@ body {
   overflow: hidden;
 }
 .aboutme.open {
+  width: 100%;
+  height: 100%;
   right: 0;
   bottom: 0;
   transition: color 2s, background-size 1.5s, right 1s ease-in-out;
@@ -109,17 +111,20 @@ h1:hover {
 .aboutmecontent {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   line-height: 4rem;
   margin: 0;
-  padding: 1%;
-  width: 73%;
+  padding: 0;
+  width: 75%;
   height: 100%;
   color: transparent;
   transition: color 1s;
 }
 .aboutmecontent.visible {
-  animation: Slide_Up 3s ease;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  animation: Slide_Up 2.5s ease;
   transition: color 3s;
   color: rgb(255, 254, 208);
 }
@@ -132,6 +137,7 @@ h1:hover {
   flex-direction: row;
   position: absolute;
   align-items: flex-start;
+  max-width: 100%;
   width: 100%;
   height: 100%;
   right: -75%;
@@ -185,19 +191,20 @@ h2:hover {
 }
 .achievementscontent {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-around;
   line-height: 3rem;
   margin: 0;
-  padding: 1%;
-  width: 70%;
+  padding: 0;
+  width: 70vw;
   height: 100%;
   color: transparent;
   transition: color 1s;
   font-size: 0.9em;
 }
 .achievementscontent.visible {
+  padding: 0;
   animation: Slide_Up 3s ease;
   transition: color 3s;
   color: rgb(240, 246, 122);
@@ -273,13 +280,14 @@ h3:hover {
   justify-content :center;
   line-height: 5rem;
   margin: 0;
-  padding: 1%;
+  padding: 0;
   width: 73%;
   height: 100%;
   color: transparent;
   transition: color 1s;
 }
 .contactcontent.visible {
+  padding: 0;
   animation: Slide_Up 3s ease;
   transition: color 3s;
   color: rgb(239, 173, 98);
@@ -313,6 +321,17 @@ h3:hover {
     height: 90%;
     width: 90%;
   }
+
+  h1,
+  h2,
+  h3 {
+    bottom: 1px;
+    background: none;
+    font-size: small;
+    writing-mode:horizontal-tb;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
   .aboutme {
     flex-direction: column-reverse;
     right: 0;
@@ -330,27 +349,17 @@ h3:hover {
     background-size: 100% 100%;
     background-position: bottom;
     opacity: 1;
-    transition: bottom 1s ease-in-out;
+    transition: background-size 1.5s, bottom 1s ease-in-out;
   }
 
-  h1,
-  h2,
-  h3 {
-    bottom: 1px;
-    background: none;
-    font-size: small;
-    writing-mode:horizontal-tb;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-  }
+
   .aboutmecontent {
-  
-    width:100%;
-    height: 100%;
+    max-width:100%;
+    max-height: 100%;
     line-height: 2rem;
-    font-size: smaller;
-    justify-content: center;
-    align-items: center;
+    font-size: x-small;
+    justify-content:center;
+    align-items:center;
   }
   .achievements {
     position: absolute;
@@ -373,14 +382,14 @@ h3:hover {
     background-size: 100% 100%;
     background-position: bottom;
     opacity: 1;
-    transition: bottom 1s ease-in-out;
+    transition: background-size 1.5s, bottom 1s ease-in-out;
   }
 
   .achievementscontent {
     width:100%;
     height: 100%;
     line-height: 2rem;
-    font-size: smaller;
+    font-size: x-small;
     justify-content:space-around;
     
   }
@@ -413,14 +422,138 @@ h3:hover {
     background-size: 100% 100%;
     background-position: bottom;
     opacity: 1;
-    transition: bottom 1s ease-in-out;
+    transition: background-size 1.5s, bottom 1s ease-in-out;
   }
 
   .contactcontent {
     width:100%;
     height: 100%;
     line-height: 2rem;
+    font-size: x-small;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width:900px) and (orientation: landscape) {
+
+  .body{
+    height: 100%;
+    width: 100%;
+  }
+  h1,
+  h2,
+  h3 {
+    bottom: 1px;
+    background: none;
     font-size: smaller;
+    writing-mode:horizontal-tb;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .aboutme {
+    flex-direction: column-reverse;
+    right: 0;
+    bottom: 70%;
+    background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
+    background-position: top;
+    background-size: 100% 0;
+    transition: color 2s, background-size 1.5s, bottom 1s ease-in-out,
+      right 1s ease-in-out;
+    border-bottom: thin #000000;
+  }
+  .aboutme.open {
+    right: 0;
+    bottom: 0;
+    background-size: 100% 100%;
+    background-position: bottom;
+    opacity: 1;
+    transition: background-size 1.5s, bottom 1s ease-in-out;
+  }
+
+
+  .aboutmecontent {
+  
+    width:100%;
+    height: 80%;
+    line-height: 2rem;
+    font-size: x-small;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutmecontent.visible {
+    height: 80%;
+  }
+  .achievements {
+    position: absolute;
+    flex-direction: column-reverse;
+    right: 0;
+    bottom: 80%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
+    background-position: top;
+    background-size: 100% 0;
+    transition: color 2s, background-size 1.5s, bottom 1s ease-in-out,
+      right 1s ease-in-out;
+    border-bottom: thin #000000;
+    background-color: #48484882;
+  }
+  .achievements.open {
+    right: 0;
+    bottom: 0;
+    background-size: 100% 100%;
+    background-position: bottom;
+    opacity: 1;
+    transition: background-size 1.5s, bottom 1s ease-in-out;
+  }
+
+  .achievementscontent {
+    width:100%;
+    height: 80%;
+    line-height: 0.5rem;
+    font-size :x-small;
+    justify-content:space-around;
+    align-items:center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+    padding-left: 5vw;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .contact {
+    position: absolute;
+    flex-direction: column-reverse;
+    right: 0;
+    bottom: 90%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
+    background-position: top;
+    background-size: 100% 0;
+    transition: color 2s, background-size 1.5s, bottom 1s ease-in-out;
+    border-bottom: thin #000000;
+    background-color: #c1c1c194;
+  }
+  .contact.open {
+    right: 0;
+    bottom: 0;
+    background-size: 100% 100%;
+    background-position: bottom;
+    opacity: 1;
+    transition: background-size 1.5s, bottom 1s ease-in-out;
+  }
+
+  .contactcontent {
+    width:100%;
+    height: 100%;
+    line-height: 2rem;
+    font-size: x-small;
     justify-content: center;
     align-items: center;
   }
