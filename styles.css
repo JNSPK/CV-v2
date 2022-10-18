@@ -330,6 +330,7 @@ h3:hover {
     background-size: 100% 100%;
     background-position: bottom;
     opacity: 1;
+    transition: bottom 1s ease-in-out;
   }
 
   h1,
@@ -372,6 +373,7 @@ h3:hover {
     background-size: 100% 100%;
     background-position: bottom;
     opacity: 1;
+    transition: bottom 1s ease-in-out;
   }
 
   .achievementscontent {
@@ -401,8 +403,7 @@ h3:hover {
     background: linear-gradient(to top, #000000a6 0%, #000000a6 99vw) no-repeat;
     background-position: top;
     background-size: 100% 0;
-    transition: color 2s, background-size 1.5s, bottom 1s ease-in-out,
-      right 1s ease-in-out;
+    transition: color 2s, background-size 1.5s, bottom 1s ease-in-out;
     border-bottom: thin #000000;
     background-color: #c1c1c194;
   }
@@ -412,6 +413,7 @@ h3:hover {
     background-size: 100% 100%;
     background-position: bottom;
     opacity: 1;
+    transition: bottom 1s ease-in-out;
   }
 
   .contactcontent {
