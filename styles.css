@@ -216,7 +216,7 @@ h2:hover {
 
 .contact {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: row;
   position: absolute;
   align-items: flex-start;
   max-height: 100%;
@@ -275,13 +275,12 @@ h3:hover {
 .contactcontent {
   display: flex;
   flex-direction: column;
-  position: absolute;
   align-items: center;
   justify-content :center;
   line-height: 5rem;
   margin: 0;
   padding: 0;
-  width: 73%;
+  width: 70%;
   height: 100%;
   color: transparent;
   transition: color 1s;
