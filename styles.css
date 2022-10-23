@@ -304,6 +304,12 @@ h3:hover {
 /* MEDIA QUERIES*/
 
 @media screen and (max-width: 1200px) and (orientation: portrait) {
+  html {
+    height: -webkit-fill-available;
+  }
+  body {
+    height: -webkit-fill-available;
+  }
   h1,
   h2,
   h3 {
@@ -434,6 +440,12 @@ h3:hover {
 }
 
 @media screen and (max-width: 900px) and (orientation: landscape) {
+  html {
+    height: -webkit-fill-available;
+  }
+  body {
+    height: -webkit-fill-available;
+  }
   h1,
   h2,
   h3 {
